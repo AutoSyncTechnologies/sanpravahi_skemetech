@@ -25,10 +25,19 @@
 
     /* HAMBURGER */
     $('.hamburger').on('click', function () {
-      $(".hamburger").toggleClass("active")
-      $(".side-widget").toggleClass("active")
-      $(".section-wrapper").toggleClass("no-transform")
-    })
+      $(".hamburger").toggleClass("active");
+      $(".side-widget").toggleClass("active");
+      $(".menu-overlay").toggleClass("active"); // Show overlay
+      $(".section-wrapper").toggleClass("no-transform");
+    });
+
+    // Close Menu (Clicking X or the overlay)
+    $('.close-menu, .menu-overlay').on('click', function() {
+        $(".hamburger").removeClass("active");
+        $(".side-widget").removeClass("active");
+        $(".menu-overlay").removeClass("active");
+        $(".section-wrapper").removeClass("no-transform");
+    });
 
     /* SEARCH */
     $('.search-button').on('click', function () {

@@ -4514,3 +4514,53 @@ p, a {
 .slider .play-now {
     pointer-events: auto !important;
 }
+/* MENU OVERLAY BACKGROUND */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9; /* Sits just below the side-widget (z-index 10) */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* MOBILE CLOSE BUTTON */
+.side-widget .close-menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 5;
+}
+
+/* DESKTOP SEAMLESS GRADIENT NAVBAR */
+@media (min-width: 992px) {
+    .navbar {
+        /* Reset positioning to span the full width at the very top */
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        border-radius: 0 !important;
+        padding: 30px 60px !important;
+        
+        /* Smooth fade from the theme's sand color (90% opacity) to fully transparent */
+        background: linear-gradient(to bottom, rgba(254, 231, 189, 0.9) 0%, rgba(254, 231, 189, 0) 100%) !important; 
+        
+        /* Remove all glassmorphism filters, borders, and shadows */
+        backdrop-filter: none !important; 
+        -webkit-backdrop-filter: none !important; 
+        border: none !important;
+        box-shadow: none !important;
+    }
+}
