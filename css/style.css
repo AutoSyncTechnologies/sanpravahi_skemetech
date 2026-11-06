@@ -4429,4 +4429,88 @@ p, a {
         width: 85% !important;
         height: 180px;
     }
+}.gallery-slider {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.gallery-slider .swiper-slide {
+    width: 300px !important;
+    height: 450px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}.about-us-row + .about-us-row {
+    margin-top: 100px !important;
+    padding-top: 60px;
+}.about-us-row {
+    align-items: flex-start !important;
+}
+
+.about-us-content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.about-us-content h2 {
+    margin-top: 0 !important;
+}.about-us-row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.about-us-row .image-box {
+    margin: 0;
+}
+
+.about-us-row .about-us-content {
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.about-us-row .about-us-content h2 {
+    margin-top: 0;
+}
+
+@media (max-width: 991px) {
+    .about-us-row .image-box img {
+        width: 100% !important;
+    }
+
+    .about-us-row .about-us-content {
+        margin-top: 30px;
+    }
+}.bni-logo {
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+}
+
+.bni-logo img {
+    width: 130px;
+    height: auto;
+    object-fit: contain;
+}
+/* FORCE VERTICAL PAGE SCROLL OVER HERO SLIDER */
+.slider .swiper-container.slider-images,
+.slider .swiper-container.slider-texts {
+    /* Lets touch gestures pass through the images to scroll the page */
+    pointer-events: none !important; 
+    touch-action: auto !important;
+}
+
+/* RE-ENABLE TOUCH/CLICKS FOR THE ARROWS AND PLAY BUTTON */
+.slider .slider-nav,
+.slider .play-now {
+    pointer-events: auto !important;
 }

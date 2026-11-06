@@ -488,3 +488,25 @@ function sendServiceInquiry(event, serviceName) {
 
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
 }
+const gallerySwiper = new Swiper('.gallery-slider', {
+    direction: 'horizontal',
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 20,
+    loop: true,
+
+    navigation: {
+        nextEl: '.gallery-next',
+        prevEl: '.gallery-prev',
+    },
+
+    pagination: {
+        el: '.gallery-pagination',
+        clickable: true,
+    },
+
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+});
